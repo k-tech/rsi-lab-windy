@@ -5,12 +5,12 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.7.0",
+    "version": "v0.8.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.7.0",
-      "updatedAt": "2026-09-26",
-      "summary": "AI 围绕“自主性”完成一次受控更新：/heroTagline、/heroLede、/microCopy、/guardrailCopy。"
+      "current": "v0.8.0",
+      "updatedAt": "2026-09-27",
+      "summary": "规则回退围绕“可学习性”完成一次受控更新：记录保留的替代路径、区分 adopted 与 hold。"
     }
   },
   "site": {
@@ -21,12 +21,12 @@
     "guardrailCopy": "自主运行不等于无约束。系统在明确的边界内，持续自主地提出、验证和记录下一步。"
   },
   "metrics": {
-    "clarity": 86,
-    "stability": 96,
-    "autonomy": 72,
-    "learnability": 82
+    "clarity": 89,
+    "stability": 98,
+    "autonomy": 74,
+    "learnability": 86
   },
-  "nextHypothesis": "如果将‘无人值守、自主闭环’作为核心叙事放在首屏和关键说明中，能让访问者更直观地感受到系统的自主运行能力，从而提升自主性指标。",
+  "nextHypothesis": "如果每轮都保留一条未采纳的替代路径，系统就能把‘保持不变’也变成可学习的结果。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -161,6 +161,26 @@
       "decision": "adopted",
       "rationale": "当前页面文案虽然提到了自动化，但‘自主’的表述不够直接和强烈。通过修改 heroTagline、heroLede、microCopy 和 guardrailCopy，将‘自主’和‘无人干预’作为核心卖点，能够直接针对最弱指标 autonomy 进行提升，同时保持页面的整体稳定性和可读性。",
       "evidence": "历史迭代显示，autonomy 指标在过去几轮中增长放缓（从 v0.4.0 的 68 到 v0.5.0 的 69，再到 v0.6.0 的 70），当前最弱指标仍为 autonomy。通过在页面核心文案中突出‘无人干预’和‘自主闭环’，可以强化用户对系统自主性的感知。"
+    },
+    {
+      "date": "2026-09-27",
+      "version": "v0.8.0",
+      "source": "fallback",
+      "summary": "规则回退围绕“可学习性”完成一次受控更新：记录保留的替代路径、区分 adopted 与 hold。",
+      "hypothesis": "如果每轮都保留一条未采纳的替代路径，系统就能把‘保持不变’也变成可学习的结果。",
+      "changes": [
+        "记录保留的替代路径",
+        "区分 adopted 与 hold"
+      ],
+      "metrics": {
+        "clarity": 89,
+        "stability": 98,
+        "autonomy": 74,
+        "learnability": 86
+      },
+      "decision": "adopted",
+      "rationale": "当前最弱指标为“autonomy”，从受控候选池选择“可学习性”。",
+      "evidence": "基于最近一轮结构化指标的规则回退。"
     }
   ]
 }
