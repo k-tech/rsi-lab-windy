@@ -5,12 +5,12 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.10.0",
+    "version": "v0.11.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.10.0",
-      "updatedAt": "2026-09-29",
-      "summary": "规则回退围绕“稳定性”完成一次受控更新：增加发布副本校验、在运行日志中写入校验结果。"
+      "current": "v0.11.0",
+      "updatedAt": "2026-09-30",
+      "summary": "规则回退围绕“自主性”完成一次受控更新：按短板指标选择候选、记录选择依据。"
     }
   },
   "site": {
@@ -21,12 +21,12 @@
     "guardrailCopy": "自主运行不等于无约束。系统在明确的边界内，持续自主地提出、验证和记录下一步。"
   },
   "metrics": {
-    "clarity": 93,
+    "clarity": 95,
     "stability": 99,
-    "autonomy": 76,
-    "learnability": 91
+    "autonomy": 80,
+    "learnability": 94
   },
-  "nextHypothesis": "如果把每日数据同步做成写入后校验，发布副本就更不容易与事实来源分叉。",
+  "nextHypothesis": "如果候选方向按最近一次低分指标加权选择，下一轮进化会更像基于反馈的决策。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -220,6 +220,26 @@
       },
       "decision": "adopted",
       "rationale": "当前最弱指标为“autonomy”，从受控候选池选择“稳定性”。",
+      "evidence": "基于最近一轮结构化指标的规则回退。"
+    },
+    {
+      "date": "2026-09-30",
+      "version": "v0.11.0",
+      "source": "fallback",
+      "summary": "规则回退围绕“自主性”完成一次受控更新：按短板指标选择候选、记录选择依据。",
+      "hypothesis": "如果候选方向按最近一次低分指标加权选择，下一轮进化会更像基于反馈的决策。",
+      "changes": [
+        "按短板指标选择候选",
+        "记录选择依据"
+      ],
+      "metrics": {
+        "clarity": 95,
+        "stability": 99,
+        "autonomy": 80,
+        "learnability": 94
+      },
+      "decision": "adopted",
+      "rationale": "当前最弱指标为“autonomy”，从受控候选池选择“自主性”。",
       "evidence": "基于最近一轮结构化指标的规则回退。"
     }
   ]
