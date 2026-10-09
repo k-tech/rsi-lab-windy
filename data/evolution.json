@@ -5,12 +5,12 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.19.0",
+    "version": "v0.20.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.19.0",
-      "updatedAt": "2026-10-08",
-      "summary": "AI 围绕“自主性”完成一次受控更新：在 heroLede 中增加关于系统自主决策机制的说明、在 microCopy 中强调用户可选择暂停/跳过的选项、优化 guardrailCopy 以明确自主运行的边界、调整 guardrailTitle 以突出自主性特征。"
+      "current": "v0.20.0",
+      "updatedAt": "2026-10-09",
+      "summary": "规则回退围绕“可学习性”完成一次受控更新：记录保留的替代路径、区分 adopted 与 hold。"
     }
   },
   "site": {
@@ -23,10 +23,10 @@
   "metrics": {
     "clarity": 99,
     "stability": 99,
-    "autonomy": 95,
+    "autonomy": 97,
     "learnability": 99
   },
-  "nextHypothesis": "通过增强系统对用户的自主控制权的透明度和可见性，可以提升用户对系统自主决策的信任度，从而改善整体的自主性指标。",
+  "nextHypothesis": "如果每轮都保留一条未采纳的替代路径，系统就能把‘保持不变’也变成可学习的结果。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -403,6 +403,26 @@
       "decision": "adopted",
       "rationale": "当前 autonomy 指标为 92 是所有指标中最低的。通过让用户更清晰地看到系统如何自主运作以及他们可以如何干预，可以直接提升这一指标。",
       "evidence": "从 recentIterations 可以看到多个版本已经尝试提升 autonomy：v0.16.0 达到了 90，v0.17.0 达到了 91，v0.18.0 达到了 92。尽管有进展，但仍有提升空间。"
+    },
+    {
+      "date": "2026-10-09",
+      "version": "v0.20.0",
+      "source": "fallback",
+      "summary": "规则回退围绕“可学习性”完成一次受控更新：记录保留的替代路径、区分 adopted 与 hold。",
+      "hypothesis": "如果每轮都保留一条未采纳的替代路径，系统就能把‘保持不变’也变成可学习的结果。",
+      "changes": [
+        "记录保留的替代路径",
+        "区分 adopted 与 hold"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 97,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "当前最弱指标为“autonomy”，从受控候选池选择“可学习性”。",
+      "evidence": "基于最近一轮结构化指标的规则回退。"
     }
   ]
 }
