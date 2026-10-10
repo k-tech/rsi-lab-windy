@@ -5,12 +5,12 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.20.0",
+    "version": "v0.21.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.20.0",
-      "updatedAt": "2026-10-09",
-      "summary": "规则回退围绕“可学习性”完成一次受控更新：记录保留的替代路径、区分 adopted 与 hold。"
+      "current": "v0.21.0",
+      "updatedAt": "2026-10-10",
+      "summary": "规则回退围绕“可解释性”完成一次受控更新：为迭代记录补充证据摘要、把证据与决策并列展示。"
     }
   },
   "site": {
@@ -23,10 +23,10 @@
   "metrics": {
     "clarity": 99,
     "stability": 99,
-    "autonomy": 97,
+    "autonomy": 98,
     "learnability": 99
   },
-  "nextHypothesis": "如果每轮都保留一条未采纳的替代路径，系统就能把‘保持不变’也变成可学习的结果。",
+  "nextHypothesis": "如果让每轮变更都带一条可读的证据，复盘者会更容易区分真正的学习与随机漂移。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -422,6 +422,26 @@
       },
       "decision": "adopted",
       "rationale": "当前最弱指标为“autonomy”，从受控候选池选择“可学习性”。",
+      "evidence": "基于最近一轮结构化指标的规则回退。"
+    },
+    {
+      "date": "2026-10-10",
+      "version": "v0.21.0",
+      "source": "fallback",
+      "summary": "规则回退围绕“可解释性”完成一次受控更新：为迭代记录补充证据摘要、把证据与决策并列展示。",
+      "hypothesis": "如果让每轮变更都带一条可读的证据，复盘者会更容易区分真正的学习与随机漂移。",
+      "changes": [
+        "为迭代记录补充证据摘要",
+        "把证据与决策并列展示"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 98,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "当前最弱指标为“autonomy”，从受控候选池选择“可解释性”。",
       "evidence": "基于最近一轮结构化指标的规则回退。"
     }
   ]
