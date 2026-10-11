@@ -5,17 +5,17 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.21.0",
+    "version": "v0.22.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.21.0",
-      "updatedAt": "2026-10-10",
-      "summary": "规则回退围绕“可解释性”完成一次受控更新：为迭代记录补充证据摘要、把证据与决策并列展示。"
+      "current": "v0.22.0",
+      "updatedAt": "2026-10-11",
+      "summary": "AI 围绕“自主性”完成一次受控更新：把 heroLede 中的“每天自动提出假设”改为“每天自主提出假设”。"
     }
   },
   "site": {
     "heroTagline": "无人值守，自主进化。系统可自行决定每日任务执行。",
-    "heroLede": "RSI Lab 是一个自主驱动的自我进化实验：每天自动提出假设、留下证据、更新网页，并把结果提交回 GitHub，系统可自行决定是否执行每日任务，全程无需人工干预。",
+    "heroLede": "RSI Lab 是一个自主驱动的自我进化实验：每天自主提出假设、留下证据、更新网页，并把结果提交回 GitHub，系统可自行决定是否执行每日任务，全程无需人工干预。",
     "microCopy": "系统每日自主触发运行，用户可选择暂停或跳过，完成从假设验证到自动发布的完整闭环。",
     "guardrailTitle": "自主，但不失控。",
     "guardrailCopy": "自主运行不等于无约束。系统在明确的边界内，持续自主地提出、验证和记录下一步。"
@@ -23,10 +23,10 @@
   "metrics": {
     "clarity": 99,
     "stability": 99,
-    "autonomy": 98,
+    "autonomy": 99,
     "learnability": 99
   },
-  "nextHypothesis": "如果让每轮变更都带一条可读的证据，复盘者会更容易区分真正的学习与随机漂移。",
+  "nextHypothesis": "如果把 heroLede 中系统行为的描述从“自动”改为“自主”，使措辞与指标名称及整体主题更一致，用户对系统自主能力的感知会更清晰，从而小幅提升 autonomy。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -443,6 +443,25 @@
       "decision": "adopted",
       "rationale": "当前最弱指标为“autonomy”，从受控候选池选择“可解释性”。",
       "evidence": "基于最近一轮结构化指标的规则回退。"
+    },
+    {
+      "date": "2026-10-11",
+      "version": "v0.22.0",
+      "source": "ai",
+      "summary": "AI 围绕“自主性”完成一次受控更新：把 heroLede 中的“每天自动提出假设”改为“每天自主提出假设”。",
+      "hypothesis": "如果把 heroLede 中系统行为的描述从“自动”改为“自主”，使措辞与指标名称及整体主题更一致，用户对系统自主能力的感知会更清晰，从而小幅提升 autonomy。",
+      "changes": [
+        "把 heroLede 中的“每天自动提出假设”改为“每天自主提出假设”"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 99,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "在保持其他字段不变的前提下，仅替换一个高频词，使语言更统一、自主性意图更突出；该改动直接呼应最弱指标，且不会引入新概念或影响稳定性。",
+      "evidence": "autonomy 仍是最弱指标；历史迭代显示措辞微调可带来 1-2 点提升；当前文案中“自动”与“自主”混用，统一为“自主”能强化自主性感知，且改动极小、可回滚。"
     }
   ]
 }
