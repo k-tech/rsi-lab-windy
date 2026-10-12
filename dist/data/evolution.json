@@ -5,12 +5,12 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.22.0",
+    "version": "v0.23.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.22.0",
-      "updatedAt": "2026-10-11",
-      "summary": "AI 围绕“自主性”完成一次受控更新：把 heroLede 中的“每天自动提出假设”改为“每天自主提出假设”。"
+      "current": "v0.23.0",
+      "updatedAt": "2026-10-12",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：在 heroLede 中增加关于系统自主决策机制的详细说明、在 microCopy 中补充系统每日运行逻辑的简要说明、优化 guardrailCopy 以明确自主运行的边界和透明度。"
     }
   },
   "site": {
@@ -26,7 +26,7 @@
     "autonomy": 99,
     "learnability": 99
   },
-  "nextHypothesis": "如果把 heroLede 中系统行为的描述从“自动”改为“自主”，使措辞与指标名称及整体主题更一致，用户对系统自主能力的感知会更清晰，从而小幅提升 autonomy。",
+  "nextHypothesis": "在 heroLede 和 microCopy 中增加更多关于系统自主决策过程的具体解释，使用户更清楚地理解系统如何自主运作，从而提升可解释性指标。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -462,6 +462,27 @@
       "decision": "adopted",
       "rationale": "在保持其他字段不变的前提下，仅替换一个高频词，使语言更统一、自主性意图更突出；该改动直接呼应最弱指标，且不会引入新概念或影响稳定性。",
       "evidence": "autonomy 仍是最弱指标；历史迭代显示措辞微调可带来 1-2 点提升；当前文案中“自动”与“自主”混用，统一为“自主”能强化自主性感知，且改动极小、可回滚。"
+    },
+    {
+      "date": "2026-10-12",
+      "version": "v0.23.0",
+      "source": "ai",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：在 heroLede 中增加关于系统自主决策机制的详细说明、在 microCopy 中补充系统每日运行逻辑的简要说明、优化 guardrailCopy 以明确自主运行的边界和透明度。",
+      "hypothesis": "在 heroLede 和 microCopy 中增加更多关于系统自主决策过程的具体解释，使用户更清楚地理解系统如何自主运作，从而提升可解释性指标。",
+      "changes": [
+        "在 heroLede 中增加关于系统自主决策机制的详细说明",
+        "在 microCopy 中补充系统每日运行逻辑的简要说明",
+        "优化 guardrailCopy 以明确自主运行的边界和透明度"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 99,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "当前 clarity 指标略有下降，而可解释性作为核心支撑指标缺乏足够的解释性内容。通过增强文字描述系统自主决策的具体流程，可以显著提升用户对系统行为的理解。",
+      "evidence": "近期迭代中多次提到通过让用户看到系统可自行决定运行与否来提升自主性感知，这表明增加解释性内容将有效提升可解释性。"
     }
   ]
 }
