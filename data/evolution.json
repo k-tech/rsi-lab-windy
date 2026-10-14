@@ -5,12 +5,12 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.24.0",
+    "version": "v0.25.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.24.0",
-      "updatedAt": "2026-10-13",
-      "summary": "AI 围绕“自主性”完成一次受控更新：在 microCopy 中将“自动发布”改为“自主发布”。"
+      "current": "v0.25.0",
+      "updatedAt": "2026-10-14",
+      "summary": "规则回退围绕“可学习性”完成一次受控更新：记录保留的替代路径、区分 adopted 与 hold。"
     }
   },
   "site": {
@@ -26,7 +26,7 @@
     "autonomy": 99,
     "learnability": 99
   },
-  "nextHypothesis": "如果统一页面中“自动”与“自主”的术语使用，用户对系统行为的理解会更一致，从而提升清晰度。",
+  "nextHypothesis": "如果每轮都保留一条未采纳的替代路径，系统就能把‘保持不变’也变成可学习的结果。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -502,6 +502,26 @@
       "decision": "adopted",
       "rationale": "当前页面中仍存在“自动”一词，与整体“自主”主题不一致，可能导致用户混淆。统一术语可以提高清晰度，且改动极小，仅替换一个词，不会影响其他指标。",
       "evidence": "v0.22.0 已将 heroLede 中的“自动”改为“自主”，但 microCopy 中仍使用“自动发布”，导致术语不一致，可能影响用户对系统行为的理解。"
+    },
+    {
+      "date": "2026-10-14",
+      "version": "v0.25.0",
+      "source": "fallback",
+      "summary": "规则回退围绕“可学习性”完成一次受控更新：记录保留的替代路径、区分 adopted 与 hold。",
+      "hypothesis": "如果每轮都保留一条未采纳的替代路径，系统就能把‘保持不变’也变成可学习的结果。",
+      "changes": [
+        "记录保留的替代路径",
+        "区分 adopted 与 hold"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 99,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "当前最弱指标为“clarity”，从受控候选池选择“可学习性”。",
+      "evidence": "基于最近一轮结构化指标的规则回退。"
     }
   ]
 }
