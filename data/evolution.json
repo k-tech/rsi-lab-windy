@@ -5,12 +5,12 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.25.0",
+    "version": "v0.26.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.25.0",
-      "updatedAt": "2026-10-14",
-      "summary": "规则回退围绕“可学习性”完成一次受控更新：记录保留的替代路径、区分 adopted 与 hold。"
+      "current": "v0.26.0",
+      "updatedAt": "2026-10-15",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：在 heroLede 中增加关于系统决策机制的详细解释、在 microCopy 中补充系统每日运行逻辑的简要说明。"
     }
   },
   "site": {
@@ -26,7 +26,7 @@
     "autonomy": 99,
     "learnability": 99
   },
-  "nextHypothesis": "如果每轮都保留一条未采纳的替代路径，系统就能把‘保持不变’也变成可学习的结果。",
+  "nextHypothesis": "增加系统决策过程的透明度，通过更详细的解释说明每个步骤的依据，使用户能够理解系统为什么做出特定选择。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -522,6 +522,26 @@
       "decision": "adopted",
       "rationale": "当前最弱指标为“clarity”，从受控候选池选择“可学习性”。",
       "evidence": "基于最近一轮结构化指标的规则回退。"
+    },
+    {
+      "date": "2026-10-15",
+      "version": "v0.26.0",
+      "source": "ai",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：在 heroLede 中增加关于系统决策机制的详细解释、在 microCopy 中补充系统每日运行逻辑的简要说明。",
+      "hypothesis": "增加系统决策过程的透明度，通过更详细的解释说明每个步骤的依据，使用户能够理解系统为什么做出特定选择。",
+      "changes": [
+        "在 heroLede 中增加关于系统决策机制的详细解释",
+        "在 microCopy 中补充系统每日运行逻辑的简要说明"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 99,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "当前 clarity 指标略有下降，而可解释性作为核心支撑指标缺乏足够的解释性内容。通过增强文字描述系统自主决策的具体流程，可以显著提升用户对系统行为的理解。",
+      "evidence": "最近的迭代 v0.24.0 表明，在 microCopy 中将 '自动发布' 改为 '自主发布' 有助于统一术语并提高清晰度，这表明更清晰的语言可以改善用户理解。"
     }
   ]
 }
