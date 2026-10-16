@@ -5,17 +5,17 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.26.0",
+    "version": "v0.27.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.26.0",
-      "updatedAt": "2026-10-15",
-      "summary": "AI 围绕“可解释性”完成一次受控更新：在 heroLede 中增加关于系统决策机制的详细解释、在 microCopy 中补充系统每日运行逻辑的简要说明。"
+      "current": "v0.27.0",
+      "updatedAt": "2026-10-16",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：field、heroTagline、old、系统可自行决定每日任务执行。。"
     }
   },
   "site": {
-    "heroTagline": "无人值守，自主进化。系统可自行决定每日任务执行。",
-    "heroLede": "RSI Lab 是一个自主驱动的自我进化实验：每天自主提出假设、留下证据、更新网页，并把结果提交回 GitHub，系统可自行决定是否执行每日任务，全程无需人工干预。",
+    "heroTagline": "无人值守，自主进化。系统可自主决定每日任务执行。",
+    "heroLede": "RSI Lab 是一个自主驱动的自我进化实验：每天自主提出假设、留下证据、更新网页，并把结果提交回 GitHub，系统可自主决定是否执行每日任务，全程无需人工干预。",
     "microCopy": "系统每日自主触发运行，用户可选择暂停或跳过，完成从假设验证到自主发布的完整闭环。",
     "guardrailTitle": "自主，但不失控。",
     "guardrailCopy": "自主运行不等于无约束。系统在明确的边界内，持续自主地提出、验证和记录下一步。"
@@ -26,7 +26,7 @@
     "autonomy": 99,
     "learnability": 99
   },
-  "nextHypothesis": "增加系统决策过程的透明度，通过更详细的解释说明每个步骤的依据，使用户能够理解系统为什么做出特定选择。",
+  "nextHypothesis": "如果将 heroTagline 中的“自行决定”统一为“自主”，页面术语更一致，减少用户认知负荷，从而提升清晰度。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -542,6 +542,28 @@
       "decision": "adopted",
       "rationale": "当前 clarity 指标略有下降，而可解释性作为核心支撑指标缺乏足够的解释性内容。通过增强文字描述系统自主决策的具体流程，可以显著提升用户对系统行为的理解。",
       "evidence": "最近的迭代 v0.24.0 表明，在 microCopy 中将 '自动发布' 改为 '自主发布' 有助于统一术语并提高清晰度，这表明更清晰的语言可以改善用户理解。"
+    },
+    {
+      "date": "2026-10-16",
+      "version": "v0.27.0",
+      "source": "ai",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：field、heroTagline、old、系统可自行决定每日任务执行。。",
+      "hypothesis": "如果将 heroTagline 中的“自行决定”统一为“自主”，页面术语更一致，减少用户认知负荷，从而提升清晰度。",
+      "changes": [
+        "field",
+        "heroTagline",
+        "old",
+        "系统可自行决定每日任务执行。"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 99,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "当前页面中“自行”与“自主”并存，可能造成细微的语义混淆。统一术语可增强清晰度，且改动极小，仅替换一个词，不会影响其他指标。",
+      "evidence": "历史迭代中多次提到术语一致性对 clarity 的影响（如 v0.24.0），且 clarity 指标在历史中有下降趋势，持续优化有助于维持和提升清晰度。"
     }
   ]
 }
