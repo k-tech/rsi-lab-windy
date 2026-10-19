@@ -5,12 +5,12 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.29.0",
+    "version": "v0.30.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.29.0",
-      "updatedAt": "2026-10-18",
-      "summary": "AI 围绕“可解释性”完成一次受控更新：重新组织 heroLede 的动词链结构，合并为单一因果句，去掉过渡词与冗余并列、精简 microCopy 的“假设验证到自主发布的完整闭环”为“假设验证到自主发布”，避免闭环措辞与前两句重复。"
+      "current": "v0.30.0",
+      "updatedAt": "2026-10-19",
+      "summary": "规则回退围绕“可解释性”完成一次受控更新：为迭代记录补充证据摘要、把证据与决策并列展示。"
     }
   },
   "site": {
@@ -26,7 +26,7 @@
     "autonomy": 99,
     "learnability": 99
   },
-  "nextHypothesis": "如果把 heroLede 中的动词链（提出假设→留下证据→更新网页）合并为一个紧凑的因果句，可消除逗号带来的呼吸割裂感，用户对系统自主运作的逻辑链会更易理解，从而提升清晰度。",
+  "nextHypothesis": "如果让每轮变更都带一条可读的证据，复盘者会更容易区分真正的学习与随机漂移。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -605,6 +605,26 @@
       "decision": "adopted",
       "rationale": "近期迭代反复聚焦于术语统一（auto/autonomous、自行/自主），却始终停留在词汇替换而非句子结构优化；heroLede 当前含多个逗号、约70字且句法松散，这是清晰度主因之一。合并长句可降低阅读负荷。",
       "evidence": "最近5次迭代均未触及句子结构；heroLede 含三个并列动词链，逗号分隔容易产生语义断裂；microCopy 的“完整闭环”与前面已用“闭环”语境重合。"
+    },
+    {
+      "date": "2026-10-19",
+      "version": "v0.30.0",
+      "source": "fallback",
+      "summary": "规则回退围绕“可解释性”完成一次受控更新：为迭代记录补充证据摘要、把证据与决策并列展示。",
+      "hypothesis": "如果让每轮变更都带一条可读的证据，复盘者会更容易区分真正的学习与随机漂移。",
+      "changes": [
+        "为迭代记录补充证据摘要",
+        "把证据与决策并列展示"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 99,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "当前最弱指标为“clarity”，从受控候选池选择“可解释性”。",
+      "evidence": "基于最近一轮结构化指标的规则回退。"
     }
   ]
 }
