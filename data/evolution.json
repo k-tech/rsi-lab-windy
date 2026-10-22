@@ -5,16 +5,16 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.32.0",
+    "version": "v0.33.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.32.0",
-      "updatedAt": "2026-10-21",
-      "summary": "规则回退围绕“自主性”完成一次受控更新：按短板指标选择候选、记录选择依据。"
+      "current": "v0.33.0",
+      "updatedAt": "2026-10-22",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：将 heroTagline 中的“系统可自主决定每日任务执行”替换为“系统在设定边界内自主安排每日任务”，以增加边界限定。"
     }
   },
   "site": {
-    "heroTagline": "无人值守，自主进化。系统可自主决定每日任务执行。",
+    "heroTagline": "无人值守，自主进化。系统在设定边界内自主安排每日任务。",
     "heroLede": "RSI Lab 是一个自主驱动的自我进化实验：每天自主提出假设、收集证据并更新网页，然后把结果提交回 GitHub，全程无需人工干预。",
     "microCopy": "系统每日自主触发运行，用户可选择暂停或跳过，完成从假设验证到自主发布的闭环。",
     "guardrailTitle": "自主，但不失控。",
@@ -26,7 +26,7 @@
     "autonomy": 99,
     "learnability": 99
   },
-  "nextHypothesis": "如果候选方向按最近一次低分指标加权选择，下一轮进化会更像基于反馈的决策。",
+  "nextHypothesis": "如果在 heroTagline 中将“系统可自主决定每日任务执行”改为“系统在设定边界内自主安排每日任务”，用户会更清楚系统自主行为的范围与限制，减少对“自主”的绝对化误读，从而提升页面清晰度。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -665,6 +665,25 @@
       "decision": "adopted",
       "rationale": "当前最弱指标为“clarity”，从受控候选池选择“自主性”。",
       "evidence": "基于最近一轮结构化指标的规则回退。"
+    },
+    {
+      "date": "2026-10-22",
+      "version": "v0.33.0",
+      "source": "ai",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：将 heroTagline 中的“系统可自主决定每日任务执行”替换为“系统在设定边界内自主安排每日任务”，以增加边界限定。",
+      "hypothesis": "如果在 heroTagline 中将“系统可自主决定每日任务执行”改为“系统在设定边界内自主安排每日任务”，用户会更清楚系统自主行为的范围与限制，减少对“自主”的绝对化误读，从而提升页面清晰度。",
+      "changes": [
+        "将 heroTagline 中的“系统可自主决定每日任务执行”替换为“系统在设定边界内自主安排每日任务”，以增加边界限定"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 99,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "当前最弱指标为 clarity，且近期多轮迭代已反复讨论“自主”术语与边界，但 heroTagline 仍保留“自主决定”这一易被误解为无约束的表述。一次微小的措辞替换即可提升清晰度，且不涉及权限、工作流或代码，可安全回滚。",
+      "evidence": "weakestMetric 为 clarity；v0.27.0 与 v0.28.0 均涉及“自主”术语统一，但 heroTagline 未增加边界限定，仍是残余模糊点。"
     }
   ]
 }
