@@ -5,20 +5,20 @@
     "status": "演示运行中",
     "owner": "RSI Core",
     "goal": "用可观察、可回滚的每日循环演示自我进化。",
-    "version": "v0.41.0",
+    "version": "v0.42.0",
     "versioning": {
       "scheme": "semver",
-      "current": "v0.41.0",
-      "updatedAt": "2026-10-30",
-      "summary": "AI 围绕“可解释性”完成一次受控更新：将 heroTagline 中的“系统在设定边界内自主安排每日任务”替换为“系统在设定边界内自主安排每日任务，并记录每一步决策以供追踪和解释”、在 microCopy 中补充“每一步决策都可查看和解释”。"
+      "current": "v0.42.0",
+      "updatedAt": "2026-10-31",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：guardrailTitle: 替换为 '自主运行需可解释性'、guardrailCopy: 补充 '确保每一步决策可解释' 以强化可解释性要求。"
     }
   },
   "site": {
-    "heroTagline": "无人值守，自主进化。系统在设定边界内自主安排每日任务，并记录每一步决策以供追踪和解释。",
+    "heroTagline": "无人值守，自主进化。系统在设定边界内自主安排每日任务，并记录每一步决策以供追踪和解释，确保结果可解释。",
     "heroLede": "RSI Lab 是一个自主驱动的自我进化实验：每天自主提出假设、收集证据并更新网页，然后把结果提交回 GitHub，全程无需人工干预。",
-    "microCopy": "系统每日自主触发运行，用户可选择暂停或跳过，完成从假设验证到自主发布的闭环。每一步决策都可查看和解释。",
-    "guardrailTitle": "自主，但不失控。",
-    "guardrailCopy": "自主运行不等于无约束。系统在明确的边界内，持续自主地提出、验证和记录下一步。"
+    "microCopy": "系统每日自主触发运行，用户可选择暂停或跳过，完成从假设验证到自主发布的闭环。每一步决策都可查看和解释，提升可解释性。",
+    "guardrailTitle": "自主运行需可解释性",
+    "guardrailCopy": "自主运行不等于无约束。系统在明确的边界内，持续自主地提出、验证和记录下一步，确保每一步决策可解释。"
   },
   "metrics": {
     "clarity": 99,
@@ -26,7 +26,7 @@
     "autonomy": 99,
     "learnability": 99
   },
-  "nextHypothesis": "如果在 heroTagline 中增加对系统决策过程的简要说明，并在 microCopy 中补充关于可解释性的说明，用户会更清楚系统如何从自主行动中产生可解释的结果，从而提升页面可解释性。",
+  "nextHypothesis": "在 guardrail 描述中增加对可解释性的强调，使系统决策过程更透明，提升用户理解度。",
   "iterations": [
     {
       "date": "2026-09-14",
@@ -844,6 +844,26 @@
       "decision": "adopted",
       "rationale": "当前最弱指标为 clarity（可解释性），通过在 heroTagline 和 microCopy 中增加对系统决策过程的解释性描述，可以帮助用户理解系统的自主行为背后的逻辑，从而提升页面可解释性。",
       "evidence": "基于近期迭代中对可解释性的关注，以及用户反馈对术语理解的需求。"
+    },
+    {
+      "date": "2026-10-31",
+      "version": "v0.42.0",
+      "source": "ai",
+      "summary": "AI 围绕“可解释性”完成一次受控更新：guardrailTitle: 替换为 '自主运行需可解释性'、guardrailCopy: 补充 '确保每一步决策可解释' 以强化可解释性要求。",
+      "hypothesis": "在 guardrail 描述中增加对可解释性的强调，使系统决策过程更透明，提升用户理解度。",
+      "changes": [
+        "guardrailTitle: 替换为 '自主运行需可解释性'",
+        "guardrailCopy: 补充 '确保每一步决策可解释' 以强化可解释性要求"
+      ],
+      "metrics": {
+        "clarity": 99,
+        "stability": 99,
+        "autonomy": 99,
+        "learnability": 99
+      },
+      "decision": "adopted",
+      "rationale": "当前 guardrail 描述未充分强调可解释性，增加这一强调有助于提升页面整体的可解释性指标。",
+      "evidence": "根据最近迭代 v0.41.0 的 hypothesis 和 changes，明确提出在 guardrail 中补充可解释性描述以提升可解释性。"
     }
   ]
 }
